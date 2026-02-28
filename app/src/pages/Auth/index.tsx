@@ -1,10 +1,21 @@
 import Google from "./Google";
 import {
+<<<<<<< HEAD
   IonAvatar,
   IonCardContent,
   IonContent,
   IonHeader,
   IonPage,
+=======
+  IonCard,
+  IonCardContent,
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonHeader,
+  IonPage,
+  IonRow,
+>>>>>>> main
   IonTitle,
   IonToolbar,
   useIonRouter,
@@ -14,7 +25,10 @@ import { signInWithGoogle } from "../../services/auth";
 import "./style.css";
 import { authStore } from "../../store/auth";
 import { addNewUser } from "../../services/user";
+<<<<<<< HEAD
 import summary from "../../assets/summary.png";
+=======
+>>>>>>> main
 
 const Auth: React.FC = () => {
   const router = useIonRouter();
@@ -48,6 +62,7 @@ const Auth: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
+<<<<<<< HEAD
           <IonTitle
             style={{
               fontSize: "30px",
@@ -106,6 +121,29 @@ const Auth: React.FC = () => {
             />
           </div>
         </div>
+=======
+          <IonTitle>Summary Finder</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent className="ion-text-center ion-padding">
+        <IonGrid fixed>
+          <IonRow class="ion-justify-content-center">
+            <IonCol size="12" sizeMd="8" sizeLg="6" sizeXl="4"></IonCol>
+          </IonRow>
+          <IonRow class="ion-justify-content-center">
+            <IonCol size="12" sizeMd="8" sizeLg="6" sizeXl="4">
+              <IonCard>
+                <IonCardContent>
+                  <h1 className="signIn-content">Sign In</h1>
+                  <div className="signIn-contact">
+                    <Google onClick={googleSign} />
+                  </div>
+                </IonCardContent>
+              </IonCard>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
+>>>>>>> main
       </IonContent>
     </IonPage>
   );
